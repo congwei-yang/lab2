@@ -76,11 +76,20 @@ x[which(is.na(as.numeric(x)))]
 2. subset only the negative numbers from `x`.
 
 ```{r}
-as.numeric(x)
+x[which(as.numeric(x) < 0)]
 ```
 
 
 3. select the numbers divisible by 3 from `x`.
 
+```{r}
+x[which(as.numeric(x) %% 3 == 0)]
+```
+
+
 4. remove all values with an even index from `x`.
+```{r}
+
+```
+
 
