@@ -49,6 +49,14 @@ z <- seq(0, 3600 * 10, by = 3600)
 What do you notice about the date-time? If you are unsure, check out
 Unix Epoch.
 
+```{r}
+attr(z, which = "POSIXct") = "date-time"
+```
+
+```{r}
+str(z)
+```
+
 ## Subsetting
 
 Consider the atomic vector `x`.
@@ -61,7 +69,16 @@ x
 
 1. subset only the letters from `x`.
 
+```{r}
+x[which(is.na(as.numeric(x)))]
+```
+
 2. subset only the negative numbers from `x`.
+
+```{r}
+as.numeric(x)
+```
+
 
 3. select the numbers divisible by 3 from `x`.
 
